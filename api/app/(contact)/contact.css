@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+    size: A4;
+    width: 8.27in;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    background-color: #fff;
+    border: 1px solid #000;
+    user-select: none;
+}
+
+.contact-page {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.contact-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.contact-group-title {
+    font-size: 1rem;
+    font-weight: 1000;
+    margin-bottom: 0.5rem;
+}
+
+.contact-date {
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: right;
+    margin-bottom: 1rem;
+}
+
+.contact-date span {
+    font-weight: 700;
+}
+
+.contact-parties {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.contact-parties-title {
+    font-size: 1rem;
+    font-weight: 1000;
+    margin-bottom: 0.5rem;
+}
+
+.contact-parties-single {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+}
+
+.contact-parties-single-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+}
+
+.contact-parties-single-value {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.contact-parties-single-key {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.contact-parties-single span {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.contact-parties-single-inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.contact-parties-single-inputs-vertical {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.5rem;
+}
+
+.contact-parties-single-inputs-vertical div {
+    margin-right: 0.5rem;
+}
+
+.contact-parties-single-inputs div {
+    margin-bottom: 0.1rem;
+}
+
+@page:first {
+    size: A4;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+@page {
+    size: A4;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    
+}
+
+.nonprintable, .nonprintable *
+{
+    display: none !important;
+}

@@ -1,0 +1,18 @@
+{
+  "projects": {
+    "default": "sozlesmeci-com-tr"
+  },
+  "targets": {
+    "sozlesmeci-com-tr": {
+      "hosting": {
+        "api": [
+          "sozlesmeci-api"
+        ],
+        "web": [
+          "sozlesmeci-com-tr"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
