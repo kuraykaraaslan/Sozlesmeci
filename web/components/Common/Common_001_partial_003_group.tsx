@@ -1,17 +1,36 @@
 import React from 'react';
 
+import { Text, StyleSheet, View } from '@react-pdf/renderer';
+
+
 const Common_001_partial_003_group = ({props}) => {
 
-    let title = props?.title as string | "Başlık";
-    let number = props?.number as number | 1;
+    // Centered 12px bold text
 
+    const styles = StyleSheet.create({
+        area: {
+            display: 'flex',
+            justifyContent: 'flex-start',
+            alignItems: 'flex-start',
+            width: '100%',
+            height: 20,
+            marginBottom: 10,
+            fontFamily: 'Roboto',
+            fontWeight: 'bold',
+        },
+        title: {
+            fontSize: 12,
+            color: 'red',
+        }
+    });
+
+
+    let title = props?.title as string;
 
     return (
-        <>
-        <div className="flex justify-left w-full mb-2">
-            <p className="text-black text-base font-bold">{number ? (number + '. ' + title) : title}</p>
-        </div>
-        </>
+        <View style={styles.area}>
+            <Text>{title ? title : 'Başlık'}</Text>
+        </View>
     );
 }
 export default Common_001_partial_003_group;

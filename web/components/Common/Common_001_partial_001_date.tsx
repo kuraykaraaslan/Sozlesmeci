@@ -1,5 +1,7 @@
 'use client';
 import React, { useState , useEffect } from 'react';
+import { Text, StyleSheet, View } from '@react-pdf/renderer';
+
 
 const Common_001_partial_001_date = ({ props }) => {
 
@@ -8,6 +10,23 @@ const Common_001_partial_001_date = ({ props }) => {
     const [dateDay, setDateDay] = useState<number>(date?.getDate());
     const [dateMonth, setDateMonth] = useState<number>(date?.getMonth());
     const [dateYear, setDateYear] = useState<number>(date?.getFullYear());
+
+    const styles = StyleSheet.create({
+        area: {
+            display: 'flex',
+            justifyContent: 'flex-end',
+            alignItems: 'flex-end',
+            width: '100%',
+            height: 20,
+            marginBottom: 10
+        },
+        title: {
+            fontSize: 12,
+            fontWeight: 'bold',
+            fontFamily: 'Times-Roman',
+            color: 'red',
+        }
+    });
 
     useEffect(() => {
         setDate(props?.date as Date);
@@ -28,14 +47,14 @@ const Common_001_partial_001_date = ({ props }) => {
     */
 
     return (
-        //date of contact top right of the page
-        <div className="flex justify-end text-lg">
-            <p className="text-black text-right">
+        <View style={styles.area}>
+            <Text>
                 {date ? 
                 (dateDay ? (dateDay < 10 ? '0' + dateDay : dateDay) : '__') + '/' + 
                 (dateMonth ? (dateMonth < 10 ? '0' + (dateMonth + 1) : (dateMonth + 1)) : '__') + '/' + 
-                (dateYear ? dateYear : '____') : '__/__/____'}</p>
-        </div>
+                (dateYear ? dateYear : '____') : '__/__/____'}
+            </Text>
+        </View>
     );
 }
 

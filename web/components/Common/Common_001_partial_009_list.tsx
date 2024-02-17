@@ -8,7 +8,7 @@ interface Item {
 }
 
 //<Common_001_partial_006_table props={{ table: [["Taşınmazın Adresi", tasinmazin_adresi], ["Taşınmazın Cinsi", tasinmazin_cinsi],
-const Common_001_partial_006_table = ({ props }) => {
+const Common_001_partial_009_list = ({ props }) => {
 
     let inputs = props?.table as Item[];
 
@@ -16,7 +16,6 @@ const Common_001_partial_006_table = ({ props }) => {
         area: {
             marginBottom: 10,
             fontFamily: 'Roboto',
-            fontWeight: 'bold',
             width: '100%',
         },
         table: {
@@ -28,6 +27,14 @@ const Common_001_partial_006_table = ({ props }) => {
             width: '100%',
             flexDirection: 'row',
 
+        },
+        number: {
+            fontSize: 12,
+            fontWeight: 'bold',
+            marginRight: 5,
+        },
+        text: {
+            fontSize: 12,
         },
         cell: {
             width: '50%',
@@ -44,12 +51,8 @@ const Common_001_partial_006_table = ({ props }) => {
                 {inputs.map((item, index) => {                            
                     return (
                         <View key={index} style={styles.row}>
-                            <View style={styles.cell}>
-                                <Text>{item.key}</Text>
-                            </View>
-                            <View style={styles.cell}>
-                                <Text>{item.value}</Text>
-                            </View>
+                                <Text style={styles.number}>{index + 1}.</Text>
+                                <Text style={styles.text}>{item.key}</Text>
                         </View>
                     );
                 })}
@@ -57,4 +60,4 @@ const Common_001_partial_006_table = ({ props }) => {
         </View>
     );
 }
-export default Common_001_partial_006_table;
+export default Common_001_partial_009_list;

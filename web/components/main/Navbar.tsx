@@ -5,7 +5,7 @@ const Navbar = () => {
 
     return (
         <div className="px-4 pt-4">
-            <div className="navbar bg-base-100 rounded-box">
+            <div className="navbar bg-base-100 rounded-box sticky top-0 z-[1]">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -23,26 +23,19 @@ const Navbar = () => {
                             <li><a>Item 3</a></li>
                         </ul>
                     </div>
-                    <a className="flex flex-row text-xl text-primary gap-2 ml-2 select-none" href="/"
-                    ><FontAwesomeIcon icon={faPen} style={{ width: "1.5em", height: "1.5em"}} /> Sözleşmeci</a>
+                    <a className="flex flex-row text-xl text-primary gap-2 ml-2 select-none font-bold" href="/"
+                    ><FontAwesomeIcon icon={faPen} style={{ width: "1.2em", height: "1.2em" }} /> SÖZLEŞMECİ</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
-                        <li><a>Item 1</a></li>
-                        <li>
-                            <details>
-                                <summary>Parent</summary>
-                                <ul className="p-2">
-                                    <li><a>Submenu 1</a></li>
-                                    <li><a>Submenu 2</a></li>
-                                </ul>
-                            </details>
-                        </li>
-                        <li><a>Item 3</a></li>
+                    <ul className="menu menu-horizontal px-1 gap-2">
+                        <li><a href="/">Anasayfa</a></li>
+                        <li><a href="/sozlesmeler" className="bg-primary text-white font-bold hover:bg-secondary">Sözleşmeler</a></li>
+                        <li><a href="/hakkimizda">Hakkımızda</a></li>
+                        <li><a href="/iletisim">İletişim</a></li>
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+                    <a className="btn">Giriş</a>
                 </div>
             </div>
         </div>

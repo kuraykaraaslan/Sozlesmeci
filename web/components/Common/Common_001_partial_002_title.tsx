@@ -1,13 +1,36 @@
 import React from 'react';
 
+import { Text, StyleSheet, View } from '@react-pdf/renderer';
+
+
 const Common_001_partial_002_title = ({props}) => {
+
+    // Centered 12px bold text
+
+    const styles = StyleSheet.create({
+        area: {
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            width: '100%',
+            height: 20,
+            marginBottom: 10,
+            fontFamily: 'Roboto',
+            fontWeight: 'bold',
+        },
+        title: {
+            fontSize: 12,
+            color: 'red',
+        }
+    });
+
 
     let title = props?.title as string;
 
     return (
-        <div className="flex justify-center w-full">
-        <p className="text-black text-lg font-bold">{title ? title : 'Başlık'}</p>
-        </div>
+        <View style={styles.area}>
+            <Text>{title ? title : 'Başlık'}</Text>
+        </View>
     );
 }
 export default Common_001_partial_002_title;

@@ -14,7 +14,8 @@
     "next": "latest",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-pdf": "^7.7.0"
+    "react-pdf": "^7.7.0",
+    "typeface-roboto": "^1.1.13"
   },
   "devDependencies": {
     "@types/node": "^20.11.17",

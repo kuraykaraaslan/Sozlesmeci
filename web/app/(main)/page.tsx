@@ -1,6 +1,8 @@
 'use client';
 import { useState } from 'react';
 import { Document, Page } from 'react-pdf';
+import Demo from '../../components/main/Heros/Demo';
+import Pricing from '../../components/main/Heros/Pricing';
 
 function MyApp() {
   const [numPages, setNumPages] = useState<number>();
@@ -11,13 +13,9 @@ function MyApp() {
   }
 
   return (
-    <div>
-      <Document file="somefile.pdf" onLoadSuccess={onDocumentLoadSuccess}>
-        <Page pageNumber={pageNumber} />
-      </Document>
-      <p>
-        Page {pageNumber} of {numPages}
-      </p>
+    <div className="flex flex-col w-full h-full -mt-14 items-center justify-center overflow-auto pb-10">
+      <Demo />
+      <Pricing />
     </div>
   );
 }

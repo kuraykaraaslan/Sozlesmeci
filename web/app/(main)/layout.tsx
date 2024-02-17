@@ -1,5 +1,6 @@
 import { Metadata } from "next"
 import Navbar from "../../components/main/Navbar";
+import Footer from "../../components/main/Footer";
 
 import './main.css';
 
@@ -23,6 +24,7 @@ export default function RootLayout({
         <div className="p-4">
         {children}
         </div>
+        <Footer />
       </body>
     </html>
   );
